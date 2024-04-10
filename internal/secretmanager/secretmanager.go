@@ -35,7 +35,7 @@ func (sm *SecretManagerClient) GetSecret(secretID string) ([]byte, error) {
 	// Build the request.
 	accessRequest := &secretmanagerpb.AccessSecretVersionRequest{Name: name}
 
-	// CAll the API
+	// Call the API
 	secret, err := sm.client.AccessSecretVersion(context.Background(), accessRequest)
 	if err != nil {
 		return nil, err
